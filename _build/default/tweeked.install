@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/tweeked/META"
+  "_build/install/default/lib/tweeked/dune-package"
+  "_build/install/default/lib/tweeked/opam"
+]
+bin: [
+  "_build/install/default/bin/tweeked"
+]
