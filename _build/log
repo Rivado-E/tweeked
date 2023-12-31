@@ -1,9 +1,9 @@
 # dune exec tweeked
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Shared cache location: /Users/noel/.cache/dune/db
-# Workspace root: /Users/noel/Documents/Code/tweeked
-# Auto-detected concurrency: 8
+# Shared cache location: /home/rivaldo/.cache/dune/db
+# Workspace root: /home/rivaldo/Documents/tweeked
+# Auto-detected concurrency: 4
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,10 +13,10 @@
 #  ; build_dir = In_build_dir "default"
 #  ; installed_env =
 #      map
-#        { "INSIDE_DUNE" : "/Users/noel/Documents/Code/tweeked/_build/default"
+#        { "INSIDE_DUNE" : "/home/rivaldo/Documents/tweeked/_build/default"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
 #  ; instrument_with = []
 #  }
-$ /Users/noel/.opam/default/bin/ocamlc.opt -config > /var/folders/r_/35nf_12d7sbdr03x5qfnqxlc0000gn/T/dune_c9ca30_output
+$ /home/rivaldo/.opam/default/bin/ocamlc.opt -config > /tmp/dune_d0f9bd_output

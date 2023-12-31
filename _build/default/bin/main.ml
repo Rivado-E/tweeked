@@ -33,22 +33,26 @@ let main () =
 let () = main ()
 *)
 
-
+(*this is an expection that I declared*)
 exception Dummy
+
+let create_one_table sql i db =
+  try
+    printf "%d %s\n%!" i sql;
+    match exec db sql ~cb:(fun _ _ -> print_endline "???") with
+    | Rc.OK -> ()
+    | _ -> assert false
+  with xcp -> print_endline (Printexc.to_string xcp);;
+
+let rec create_n_tables db tmpl i n = if i < n then
+  let scrpt = sprintf tmpl i
+  in
+  (create_one_table scrpt i db);
+  create_n_tables db tmpl (i+1) n else ();;
 
 let () =
   let db = db_open "this.db" in
-  for i = 0 to 10 do
-    try
-      let sql =
-        sprintf "CREATE TABLE tbl%d (a varchar(1), b INTEGER, c FLOAT)" i
-      in
-      printf "%d %s\n%!" i sql;
-      match exec db sql ~cb:(fun _ _ -> print_endline "???") with
-      | Rc.OK -> ()
-      | _ -> assert false
-    with xcp -> print_endline (Printexc.to_string xcp)
-  done;
+  create_n_tables db  "CREATE TABLE TBL%d (a varchar(1), b INTEGER, c FLOAT)" 0 10;
   for i = 0 to 3 do
     let sql = sprintf "SYNTACTICALLY INCORRECT SQL STATEMENT" in
     printf "%d %s\n%!" i sql;
