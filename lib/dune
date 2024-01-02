@@ -1,2 +1,4 @@
 (library
- (name tweeked))
+ (name tweeked)
+ (libraries sqlite3 opium caqti caqti-driver-postgresql caqti-lwt tyxml)
+ (modules calendar post_routes user_routes user event))

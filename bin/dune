@@ -1,4 +1,5 @@
 (executable
  (public_name tweeked)
  (name main)
- (libraries tweeked sqlite3 opium caqti caqti-driver-postgresql caqti-lwt tyxml))
+ (libraries tweeked))
+
