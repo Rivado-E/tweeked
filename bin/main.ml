@@ -11,6 +11,7 @@ let () =
   |> App.port 3141
   |> App.middleware Middleware.logger
   |> App.post "/user/create" User_routes.user_create
+  |> App.get "/user:username" User_routes.retrive_user
   |> App.get "/" hello
   |> App.run_command
-  |> ignore
+  |> ignore;;

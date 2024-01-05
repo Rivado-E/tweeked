@@ -1,9 +1,9 @@
-# dune build
+# dune exec tweeked
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Shared cache location: /home/rivaldo/.cache/dune/db
-# Workspace root: /home/rivaldo/Documents/projects/tweeked
-# Auto-detected concurrency: 4
+# Shared cache location: /Users/noel/.cache/dune/db
+# Workspace root: /Users/noel/Documents/Code/tweeked
+# Auto-detected concurrency: 8
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,18 +13,10 @@
 #  ; build_dir = In_build_dir "default"
 #  ; installed_env =
 #      map
-#        { "INSIDE_DUNE" :
-#            "/home/rivaldo/Documents/projects/tweeked/_build/default"
+#        { "INSIDE_DUNE" : "/Users/noel/Documents/Code/tweeked/_build/default"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
 #  ; instrument_with = []
 #  }
-$ /home/rivaldo/.opam/default/bin/ocamlc.opt -config > /tmp/dune_68bd40_output
-$ (cd _build/default && /home/rivaldo/.opam/default/bin/ocamldep.opt -modules -impl lib/user_routes.ml) > _build/default/lib/.tweeked.objs/tweeked__User_routes.impl.d
-$ (cd _build/default && /home/rivaldo/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.tweeked.objs/byte -I /home/rivaldo/.opam/default/lib/angstrom -I /home/rivaldo/.opam/default/lib/astring -I /home/rivaldo/.opam/default/lib/base64 -I /home/rivaldo/.opam/default/lib/bigstringaf -I /home/rivaldo/.opam/default/lib/bytes -I /home/rivaldo/.opam/default/lib/caqti -I /home/rivaldo/.opam/default/lib/caqti-driver-postgresql -I /home/rivaldo/.opam/default/lib/caqti-lwt -I /home/rivaldo/.opam/default/lib/caqti/platform -I /home/rivaldo/.opam/default/lib/caqti/platform/unix -I /home/rivaldo/.opam/default/lib/cmdliner -I /home/rivaldo/.opam/default/lib/cstruct -I /home/rivaldo/.opam/default/lib/domain-name -I /home/rivaldo/.opam/default/lib/eqaf -I /home/rivaldo/.opam/default/lib/eqaf/bigstring -I /home/rivaldo/.opam/default/lib/eqaf/cstruct -I /home/rivaldo/.opam/default/lib/faraday -I /home/rivaldo/.opam/default/lib/faraday-lwt -I /home/rivaldo/.opam/default/lib/faraday-lwt-unix -I /home/rivaldo/.opam/default/lib/fmt -I /home/rivaldo/.opam/default/lib/hmap -I /home/rivaldo/.opam/default/lib/httpaf -I /home/rivaldo/.opam/default/lib/httpaf-lwt-unix -I /home/rivaldo/.opam/default/lib/ipaddr -I /home/rivaldo/.opam/default/lib/logs -I /home/rivaldo/.opam/default/lib/lwt -I /home/rivaldo/.opam/default/lib/lwt-dllist -I /home/rivaldo/.opam/default/lib/lwt/unix -I /home/rivaldo/.opam/default/lib/macaddr -I /home/rivaldo/.opam/default/lib/magic-mime -I /home/rivaldo/.opam/default/lib/mirage-crypto -I /home/rivaldo/.opam/default/lib/mtime -I /home/rivaldo/.opam/default/lib/mtime/clock/os -I /home/rivaldo/.opam/default/lib/multipart-form-data -I /home/rivaldo/.opam/default/lib/ocaml/threads -I /home/rivaldo/.opam/default/lib/ocaml/unix -I /home/rivaldo/.opam/default/lib/ocplib-endian -I /home/rivaldo/.opam/default/lib/ocplib-endian/bigstring -I /home/rivaldo/.opam/default/lib/opium -I /home/rivaldo/.opam/default/lib/postgresql -I /home/rivaldo/.opam/default/lib/ptime -I /home/rivaldo/.opam/default/lib/re -I /home/rivaldo/.opam/default/lib/result -I /home/rivaldo/.opam/default/lib/rock -I /home/rivaldo/.opam/default/lib/seq -I /home/rivaldo/.opam/default/lib/sexplib0 -I /home/rivaldo/.opam/default/lib/sqlite3 -I /home/rivaldo/.opam/default/lib/stringext -I /home/rivaldo/.opam/default/lib/tyxml -I /home/rivaldo/.opam/default/lib/tyxml/functor -I /home/rivaldo/.opam/default/lib/uri -I /home/rivaldo/.opam/default/lib/uutf -I /home/rivaldo/.opam/default/lib/yojson -no-alias-deps -opaque -open Tweeked -o lib/.tweeked.objs/byte/tweeked__User_routes.cmo -c -impl lib/user_routes.ml)
-> File "lib/user_routes.ml", line 8, characters 6-9:
-> 8 |   let%lwt body = Request.to_json_exn req in
->           ^^^
-> Error: Uninterpreted extension 'lwt'.
-[2]
+$ /Users/noel/.opam/default/bin/ocamlc.opt -config > /var/folders/r_/35nf_12d7sbdr03x5qfnqxlc0000gn/T/dune_5c9fc4_output
